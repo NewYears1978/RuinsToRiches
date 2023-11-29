@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ultima Online: Riches to Ruins</title>
+    <style>
+        body {
+            font-family: 'Times New Roman', serif;
+            background-color: #d9c99d;
+            text-align: center;
+            padding: 20px;
+            margin: 0;
+        }
+
+        #container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #f2e1b1;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #503f2c;
+        }
+
+        #response {
+            font-size: 24px;
+            margin-top: 20px;
+            color: #503f2c;
+        }
+
+        #button {
+            background-color: #87552b;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+
+        #button:hover {
+            background-color: #a96e3b;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h1>Should I play Ultima Online: Riches to Ruins?</h1>
+        <button id="button" onclick="generateResponse()">Click to Find Out</button>
+        <div id="response"></div>
+
+        <script>
+            var responses = [
+                "Yes!",
+                "Absolutely!",
+                "Without a doubt!",
+                "Go for it!",
+                "Definitely!",
+                "Sure thing!",
+                "Why not?",
+                "Indeed!",
+                "By all means!",
+                "Absolutely, positively yes!"
+            ];
+
+            // Function to get a random response
+            function getRandomResponse() {
+                var index = Math.floor(Math.random() * responses.length);
+                return responses[index];
+            }
+
+            // Function to display a random response
+            function generateResponse() {
+                var responseElement = document.getElementById("response");
+                responseElement.textContent = getRandomResponse();
+            }
+        </script>
+    </div>
+</body>
+</html>
